@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Na9-uI-fVh">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5vu-El-Zt1">
+            <objects>
+                <viewController id="Na9-uI-fVh" customClass="ViewController" customModule="Fibonacci" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxK-0z-byu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get nth Fibonacci number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REd-ox-qNs">
+                                <rect key="frame" x="32" y="88" width="350" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter number of steps" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kHd-bo-uLu">
+                                <rect key="frame" x="32" y="295" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7kE-1T-rhD"/>
+                                </constraints>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOu-jO-hNs">
+                                <rect key="frame" x="32" y="371" width="350" height="44"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="EZQ-cR-NGj"/>
+                                </constraints>
+                                <state key="normal" title="Check result using recursion">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnCheckResultUsingRecursion:" destination="Na9-uI-fVh" eventType="touchUpInside" id="Ejz-9A-YVk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnI-IJ-n3C">
+                                <rect key="frame" x="32" y="431" width="350" height="44"/>
+                                <color key="backgroundColor" red="0.19215686269999999" green="0.14901960780000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="5M1-oe-221"/>
+                                </constraints>
+                                <state key="normal" title="Check result using iteration">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnCheckResultUsingIteration:" destination="Na9-uI-fVh" eventType="touchUpInside" id="Hxt-4C-Uj4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FhQ-5I-xzN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fnI-IJ-n3C" firstAttribute="leading" secondItem="eOu-jO-hNs" secondAttribute="leading" id="3LL-d5-j5t"/>
+                            <constraint firstItem="kHd-bo-uLu" firstAttribute="leading" secondItem="FhQ-5I-xzN" secondAttribute="leading" constant="32" id="Bbr-8q-J8g"/>
+                            <constraint firstItem="eOu-jO-hNs" firstAttribute="leading" secondItem="kHd-bo-uLu" secondAttribute="leading" id="Edx-eg-0A4"/>
+                            <constraint firstItem="fnI-IJ-n3C" firstAttribute="centerY" secondItem="FhQ-5I-xzN" secondAttribute="centerY" id="KA4-sa-aGS"/>
+                            <constraint firstItem="fnI-IJ-n3C" firstAttribute="trailing" secondItem="eOu-jO-hNs" secondAttribute="trailing" id="SAu-L9-V0d"/>
+                            <constraint firstItem="FhQ-5I-xzN" firstAttribute="trailing" secondItem="REd-ox-qNs" secondAttribute="trailing" constant="32" id="WE3-wo-UgR"/>
+                            <constraint firstItem="eOu-jO-hNs" firstAttribute="trailing" secondItem="kHd-bo-uLu" secondAttribute="trailing" id="WVq-eu-LRc"/>
+                            <constraint firstItem="REd-ox-qNs" firstAttribute="leading" secondItem="FhQ-5I-xzN" secondAttribute="leading" constant="32" id="ZGq-91-4Rb"/>
+                            <constraint firstItem="REd-ox-qNs" firstAttribute="top" secondItem="FhQ-5I-xzN" secondAttribute="top" constant="44" id="aFU-41-jUd"/>
+                            <constraint firstItem="FhQ-5I-xzN" firstAttribute="trailing" secondItem="kHd-bo-uLu" secondAttribute="trailing" constant="32" id="fVH-DM-aa8"/>
+                            <constraint firstItem="fnI-IJ-n3C" firstAttribute="top" secondItem="eOu-jO-hNs" secondAttribute="bottom" constant="16" id="geO-gJ-T5D"/>
+                            <constraint firstItem="eOu-jO-hNs" firstAttribute="top" secondItem="kHd-bo-uLu" secondAttribute="bottom" constant="32" id="yqf-ZM-fpe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtfldInput" destination="kHd-bo-uLu" id="FZQ-94-UTZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tm-Nq-B6T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="52"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
